@@ -1,28 +1,31 @@
 <%- include("partials/header.ejs") %>
 
-
-
-<h1 class="create-post-title">Create a new Post</h1>
-<form action="/" method="POST">
-    <% if(locals.titlePost && locals.textPost) { %>
+<h1 class="create-post-title"><%= id ? "Edit Post" : "Create a New Post" %></h1>
+<form action="<%= id ? `/update/${id}` : '/' %>" method="POST">
     <div class="post-title">
-        <input type="text" id="post-title" name="titlePost" value="<%= titlePost %>" placeholder="Add your Post title here!" autocomplete="off" required>
+        <input
+            type="text"
+            id="post-title"
+            name="titlePost"
+            value="<%= titlePost || '' %>"
+            placeholder="Add your Post title here!"
+            autocomplete="off"
+            required
+        >
     </div>
     <div class="post-text">
-        <textarea id="input-box" rows="10" cols="1" name="textPost" placeholder="Add your Post text here!" required><%= textPost %></textarea>
+        <textarea
+            id="input-box"
+            rows="10"
+            cols="1"
+            name="textPost"
+            placeholder="Add your Post text here!"
+            required
+        ><%= textPost || '' %></textarea>
     </div>
-    <% } else { %>
-        <div class="post-title">
-        <input type="text" id="post-title" name="titlePost" placeholder="Add your Post title here!" autocomplete="off" required >
-    </div>
-    <div class="post-text">
-        <textarea id="input-box" rows="10" cols="1" name="textPost" placeholder="Add your Post text here!" required></textarea>
-    </div>
-    <% } %>
     <div class="button-div">
         <button class="submit-button">Submit</button>
-    </div> 
+    </div>
 </form>
-
 
 <%- include("partials/footer.ejs") %>
