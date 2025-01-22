@@ -33,6 +33,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 let posts = [];
 
+app.get("/health", (req, res) => {
+  res.status(200).send("Server is running!");
+});
+
 app.get("/", async (req, res) =>{
   try{
     const getPosts = await db.query('SELECT * FROM posts ORDER BY id DESC');
