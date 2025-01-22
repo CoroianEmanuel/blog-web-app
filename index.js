@@ -3,18 +3,27 @@ import bodyParser from "body-parser";
 import pg from "pg";
 import dotenv from "dotenv"
 
-
 dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 
 const db = new pg.Client({
   connectionString: process.env.DATABASE_URL, 
-    ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+  ssl: {
+    rejectUnauthorized: false, 
+  },
 });
 
+db.connect((err) => {
+  if (err) {
+    console.error('Database connection failed:', err.stack);
+  } else {
+    console.log('Database connected successfully!');
+  }
+});
 
-db.connect();
+export default db;
+
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
