@@ -5,7 +5,7 @@ import dotenv from "dotenv"
 
 dotenv.config();
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const db = new pg.Client({
   connectionString: 'postgresql://postgres:eqLCFzQPCAULBVlkFyulxujpDXwGIsTm@junction.proxy.rlwy.net:44169/railway'
