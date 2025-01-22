@@ -8,7 +8,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const db = new pg.Client({
-  connectionString: 'postgresql://postgres:eqLCFzQPCAULBVlkFyulxujpDXwGIsTm@junction.proxy.rlwy.net:44169/railway'
+  connectionString: process.env.DATABASE_URL, 
+    ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
 });
 
 
@@ -105,7 +106,7 @@ app.post("/update/:id", async (req, res) =>{
   }
 });
 
-app.listen(port, () => {
+app.listen(port,"0.0.0.0", () => {
   console.log(`Server running on port http://localhost:${port}`);
 });
 
