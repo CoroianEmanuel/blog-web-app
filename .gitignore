@@ -5,3 +5,5 @@ node_modules/*
 
 images/*
 !images/gitkeep
+
+.env
