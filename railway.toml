@@ -1,0 +1,5 @@
+[service]
+name = "blog-web-app"
+
+[deploy]
+start = "npm start"
