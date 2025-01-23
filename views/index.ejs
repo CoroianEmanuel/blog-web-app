@@ -14,13 +14,13 @@
             <input type="hidden" name="titlePost" value="<%= post.title %>">
             <input type="hidden" name="textPost" value="<%= post.content %>">
             <form action="/edit/<%= post.id %>" method="GET" style="display:inline;">
-                <button type="submit" style="border: none; background: none; cursor: pointer;">
+                <button type="submit" class="icon-button">
                     <i class="bi bi-pencil"></i> 
                 </button>
             </form>
             <form action="/delete" method="POST" style="display:inline;">
                 <input type="hidden" name="postId" value="<%= post.id %>">
-                <button type="submit" style="border: none; background: none; cursor: pointer;">
+                <button type="submit" class="icon-button">
                     <i class="bi bi-trash"></i>
                 </button>
             </form>
