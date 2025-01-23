@@ -1,16 +1,16 @@
 html,
 body {
-  height: 100%; /* Asigură că pagina ocupă toată înălțimea disponibilă */
+  height: 100%; 
   margin: 0;
 }
 
 body {
   display: flex;
-  flex-direction: column; /* Organizează copilul pe verticală */
+  flex-direction: column; 
 }
 
 main {
-  flex: 1; /* Face ca main să ocupe tot spațiul disponibil */
+  flex: 1; 
 }
 
 footer {
@@ -45,6 +45,7 @@ footer .social_icon li a:hover {
 /* header styleing */
 header {
     flex: 0 0 auto;
+    width: 100%;
   } 
 .navbar-logo {
    padding: 15px;
@@ -126,11 +127,14 @@ header {
       flex-basis: auto;
     }
     .icon-button {
-      padding: 10px;
+      padding: 4px;
     }
     .icon-button i {
       font-size: 2rem;
     }    
+    .social_icon li a:hover {
+      transform: none; 
+    }
   }
 
   /* create-post styleing */
