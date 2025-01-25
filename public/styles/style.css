@@ -52,6 +52,7 @@ header {
     color: #fff;
   }
   .navbar-mainbg {
+    width: 100%;
     background-color: #3586ff;
     padding: 0px;
   }
@@ -130,10 +131,11 @@ header {
       padding: 10px 10px;
     }
     .bi-pencil{
-      margin-right: 0px !important;
+      margin-right: 5px !important;
     }
     footer .social_icon li a:hover {
       color: blue;
+      transform: scale(1.1);
     }
     .icon-button {
       padding: 4px;
@@ -141,9 +143,6 @@ header {
     .icon-button i {
       font-size: 2rem;
     }    
-    .social_icon li a:hover {
-      transform: none; 
-    }
   }
 
   /* create-post styleing */
