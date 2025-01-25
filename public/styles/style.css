@@ -48,7 +48,7 @@ header {
     width: 100%;
   } 
 .navbar-logo {
-   padding: 15px;
+   padding: 10px;
     color: #fff;
   }
   .navbar-mainbg {
@@ -125,6 +125,15 @@ header {
       display: flex !important;
       -ms-flex-preferred-size: auto;
       flex-basis: auto;
+    }
+    #navbarSupportedContent ul li a{
+      padding: 10px 10px;
+    }
+    .bi-pencil{
+      margin-right: 0px !important;
+    }
+    footer .social_icon li a:hover {
+      color: blue;
     }
     .icon-button {
       padding: 4px;
