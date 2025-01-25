@@ -106,7 +106,7 @@ header {
     transform: rotate(90deg);
   }
 
-  @media (min-width: 767px) {
+  @media (max-width: 767px) {
     .navbar-expand-custom {
       -ms-flex-flow: row nowrap;
       flex-flow: row nowrap;
