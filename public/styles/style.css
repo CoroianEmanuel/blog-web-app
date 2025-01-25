@@ -133,7 +133,10 @@ header {
     .bi-pencil{
       margin-right: 5px !important;
     }
-    footer .social_icon li a:active {
+    footer .social_icon li a:hover {
+      transform: none;
+    }
+    footer .social_icon li a.active {
       color: blue;
       transform: scale(1.1);
     }
